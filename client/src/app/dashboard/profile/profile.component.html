@@ -1,0 +1,43 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Profile</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<div class="main">
+  <div class="header">
+    <div class="b">
+      <img src="../../../assets/user.png" class="img">
+    </div>
+    <div class="sectio">
+      <table style="width: 100%; height: 80%; border: 0px solid black; margin-top: 10px;">
+        <tr class="first">
+          <td>Saved</td>
+          <td>Followers</td>
+          <td>Posted</td>
+        </tr>
+        <tr class="data">
+          <td>0</td>
+          <td>0</td>
+          <td>0</td>
+        </tr>
+      </table>
+    </div>
+  </div>
+  <div class="content">
+    <div class="span">
+      <img src="../../../assets/pro.png" width="20px" style="margin-right: 10px;">{{user.username}}
+    </div>
+    <div class="span">
+      <img src="../../../assets/emailadd.png" width="20px" style="margin-right: 10px;">{{user.email}}
+    </div>
+    <div class="span">
+      <img src="../../../assets/location.png" width="20px" style="margin-right: 10px;">{{city | titlecase}}
+    </div>
+    <div class="span">
+      <img src="../../../assets/contact.png" width="20px" style="margin-right: 10px;">{{user.phone_number}}
+    </div>
+    
+  </div>
+</div>
+<button (click)="logout()">Logout</button>

@@ -1,0 +1,58 @@
+body{
+  padding: 0;
+  margin: 0;
+}
+
+.main{
+  width: 90%;
+  border: 0px solid black;
+  text-align: center;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%,-50%);  
+}
+
+.img{
+  margin-bottom: 18%;
+}
+
+input{
+  height: 47px;
+  border-radius: 0;
+  margin-top: 15px;
+}
+
+.form{
+  text-align: left;
+}
+
+.login{
+  color: white;
+  width: 100%;
+  height: 47px;
+  border: 0px;
+  margin-top: 10px;
+  border-radius: 0;
+}
+
+.or{
+  margin-top: 5px;
+  margin-bottom: 5px;
+}
+
+.register{
+  background-color: #FF4326;
+  color: white;
+  width: 100%;
+  height: 47px;
+  border: 0px;
+  border-radius: 0;
+}
+
+.error{
+  color: red;
+  font-size: 13px;
+  margin-left: 3px;
+  margin-top: -5px;
+}

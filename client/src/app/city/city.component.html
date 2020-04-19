@@ -1,0 +1,15 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Select City</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <div class="city">
+    <input type="text" placeholder="Search" style="padding-left: 10px; font-size: 14px;" name="search" [(ngModel)]="search" (keypress)="filter()">
+  </div>
+  
+  <ion-list style="margin-top: 50px;">
+    <ion-item *ngFor="let city of cities" (click)="choose(city)">{{city.name | titlecase}}</ion-item>
+  </ion-list>
+</ion-content>

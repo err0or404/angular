@@ -1,0 +1,26 @@
+<ion-content>
+  
+  <router-outlet></router-outlet>
+</ion-content>
+
+<div class="footer">
+  <div class="i" (click)="setActive('Dashboard')">
+    <img src="../../assets/menu.png" *ngIf="currentPage!='Dashboard'">
+    <img src="../../assets/menu-active.png" *ngIf="currentPage=='Dashboard'">
+  </div>
+  <div class="i" (click)="setActive('Wishlist')">
+    <img src="../../assets/save.png" *ngIf="currentPage!='Wishlist'">
+    <img src="../../assets/save-active.png" *ngIf="currentPage=='Wishlist'">
+  </div>
+  <div class="i" (click)="setActive('Advertisement')">
+    <img src="../../assets/file.png">
+  </div>
+  <!-- <div class="i" (click)="setActive('Chat')">
+    <img src="../../assets/chat.png" *ngIf="currentPage!='Chat'">
+    <img src="../../assets/chat-active.png" *ngIf="currentPage=='Chat'">
+  </div> -->
+  <div class="i" (click)="setActive('Profile')">
+    <img src="../../assets/profile.png" *ngIf="currentPage!='Profile'">
+    <img src="../../assets/profile-active.png" *ngIf="currentPage=='Profile'">
+  </div>
+</div>

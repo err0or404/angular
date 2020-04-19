@@ -1,0 +1,27 @@
+<ion-header class="hea">
+  <ion-toolbar>
+    <ion-title>Dashboard</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<div class="city">
+  <input type="text" name="city" #city="ngModel" [(ngModel)]="user.city" readonly (click)="goToCity()">
+</div>
+
+<div class="outer" *ngIf="ads.length > 0; else elseBlock">
+  <div class="ad" *ngFor="let ad of ads" (click)="goToDetail(ad.id)">
+    <div class="adBody" id="header">
+      <img src="../../../assets/ad_image.png" width="100%" height="100%">
+    </div>
+    <div class="adBody" id="body">
+        <span style="font-size: 18px; height: 20px;">{{format(ad.title)}}</span><br>
+        <span style="font-size: 13px;"><img src="../../../assets/pin.png" width="18px" height="17px" style="margin-right: 5px;">{{ad.city}}</span><br>
+        <span style="font-size: 13px;"><img src="../../../assets/house.png" width="18px" height="17px" style="margin-right: 5px;">{{ad.type}}</span><br>
+        <span style="font-size: 13px;"><img src="../../../assets/rupee.png" width="18px" height="17px" style="margin-right: 5px;">{{ad.price}}</span>
+    </div>
+  </div>
+</div>
+
+<ng-template #elseBlock>
+  <img class="noData" src="../../../assets/no data.png" width="50%">
+</ng-template>

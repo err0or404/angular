@@ -1,0 +1,45 @@
+body{
+    padding: 0;
+    margin: 0;
+}
+
+.main{
+    width: 100%;
+    border: 0px solid black;
+    padding: 15px;
+    padding-top: 10px;
+}
+
+input{
+    height: 50px;
+    width: 100%;
+    border: 1px solid silver;
+}
+
+label{
+    margin-top: 10px;
+}
+
+select{
+    height: 50px;
+    width: 100%;
+    padding-left: 10px;
+}
+
+textarea{
+    border: 1px solid silver;
+    height: 90px;
+}
+
+button{
+    height: 50px;
+    width: 100%;
+    border: 0px;
+    background-color: #FF4326;
+    color: white;
+    margin-top: 10px;
+}
+
+small{
+    color: red;
+}

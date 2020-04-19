@@ -1,0 +1,44 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>New Post</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<div class="main">
+  <form class="form" #postForm="ngForm">
+    <div class="form-group">
+      <label>Title</label>
+      <input type="text" class="form-control" name="title" #title="ngModel" [(ngModel)]="post.title" required>
+      <div *ngIf="(submitted || title.touched || title.dirty) && title.invalid">
+        <small>Title is required</small>
+      </div>
+    </div>
+    <div class="form-group">
+      <label>Price</label>
+      <input type="text" class="form-control" name="price" #price="ngModel" [(ngModel)]="post.price" required>
+      <div *ngIf="(submitted || price.touched || price.dirty) && price.invalid">
+        <small>Price is required</small>
+      </div>
+    </div>
+    <div class="form-group">
+      <label>Type</label>
+      <select name="type" #type="ngModel" [(ngModel)]="post.type" required>
+        <option value="sale">Sale</option>
+        <option value="rent">Rent</option>
+        <option value="share">Share</option>
+      </select>
+      <div *ngIf="(submitted || type.touched || type.dirty) && type.invalid">
+        <small>Type is required</small>
+      </div>
+    </div>
+    <div class="form-group">
+      <label>Description</label>
+      <textarea class="form-control" name="description" #description="ngModel" [(ngModel)]="post.description" required></textarea>
+      <div *ngIf="(submitted || description.touched || description.dirty) && description.invalid">
+        <small>Description is required</small>
+      </div>
+    </div>
+    <button class="submit" (click)="submit(postForm, post)">Submit</button>
+    <h5 style="text-align: center;" (click)="back()"><img src="../../assets/back.png" width="17px" style="margin-right: 0px;"><span style="vertical-align: middle; font-size: 17px;">Back</span></h5>
+  </form>
+</div>

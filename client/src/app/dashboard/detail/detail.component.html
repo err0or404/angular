@@ -1,0 +1,32 @@
+<div class="main">
+  <div class="preview">
+    <img src="../../../assets/default.jpg" width="100%" height="300px">
+  </div>
+  <div class="container">
+    <h2>
+      <b>{{ad.title}}</b><br>
+      <small style="font-size: 12px; position: absolute; margin-top: 3px;">{{ad.created | date: 'medium'}}</small>
+    </h2>
+    <p style="text-align: justify; margin-top: 38px;">{{ad.description}}</p>
+    <table style="width: 100%; margin: 5px;">
+      <tr style="font-weight: bold;">
+        <th style="width: 50%;">Type</th>
+        <th>Price</th>
+      </tr>
+      <tr style="font-size: 20px;">
+        <td style="padding-top: 3px;">{{ad.type}}</td>
+        <td style="padding-top: 3px;">{{ad.price}}</td>
+      </tr>
+    </table>
+    <p style="font-size: 15px; margin-left: 0px; margin-top: 15px;">posted by  <b>{{ad.createdByName}}</b></p>
+    <div class="action">
+      <div id="left">
+        <button class="one" *ngIf="!saved" (click)="save()">Save</button>
+        <button class="saved" *ngIf="saved">Saved</button>
+      </div>
+      <div id="left">
+        <button class="two">Message</button>
+      </div>
+    </div>
+  </div>
+</div>

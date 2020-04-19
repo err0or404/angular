@@ -1,0 +1,56 @@
+body{
+    padding: 0;
+    margin: 0;
+}
+
+.main{
+    border: 0px solid black;
+}
+
+.ad{
+    border: 0px solid black;
+    width: 50%;
+    height: 250px;
+    float: left;
+}
+
+.mainAD{
+    margin: 10px;
+    height: 230px;
+    border:1px solid silver;
+}
+
+.head{
+    height: 60%;
+}
+
+.tail{
+    height: 40%;
+    padding: 10px;
+}
+
+input{
+    border: 0px solid black;
+    width: 100%;
+    margin-top: 5px;
+}
+
+.add{
+    position: fixed;
+    border: 0px solid black;
+    height: 65px;
+    width: 65px;
+    border-radius: 50%;
+    right: 28px;
+    bottom: 95px;
+    background-color: #FF4326;
+}
+
+.plus{
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    font-size: 55px;
+    color: white;
+    transform: translate(-50%, -50%);
+}

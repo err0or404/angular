@@ -1,0 +1,25 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Advertisement</ion-title>
+  </ion-toolbar>
+</ion-header>
+<div class="add" (click)="addPost()">
+  <p class="plus">+</p>
+</div>
+<div class="main" *ngIf="ads.length>0; else elseBlock">
+  <div class="ad" *ngFor="let ad of ads">
+    <div class="mainAD">
+      <div class="head">
+        <img src="../../../assets/default.jpg" width="100%" height="100%">
+      </div>
+      <div class="tail">
+        <b><input (click)="detail(ad.id)" type="text" [value]="ad.title" readonly></b>
+        <span style="color: green; font-size: 15px;">Active</span>
+        <ion-icon name="trash-outline" style="float: right; margin-top: 10px;
+         font-size: 20px; color: red;" (click)="delete(ad.id)"></ion-icon>
+      </div>
+    </div>
+  </div>
+</div>
+<ng-template #elseBlock>
+</ng-template>
